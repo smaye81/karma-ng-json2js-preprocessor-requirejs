@@ -12,8 +12,7 @@ define(function (require) {
         var data;
         var empty;
 
-        beforeEach(mocks.module("test/stubs/data.json"));
-        beforeEach(mocks.module("test/stubs/empty.json"));
+        beforeEach(mocks.module("stubs"));
 
         beforeEach(function () {
             mocks.inject(function (_testStubsData_, _testStubsEmpty_) {

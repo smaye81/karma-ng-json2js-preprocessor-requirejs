@@ -1,52 +1,52 @@
 {
-    "name": "karma-ng-json2js-preprocessor-requirejs",
-    "version": "0.1.0",
-    "description": "A Karma plugin. Compile JSON files to Angular modules on the fly. Includes support for require.js.",
-    "main": "lib/index.js",
-    "scripts": {
-        "test": "grunt test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "github.com/smaye81/karma-ng-json2js-preprocessor-requirejs.git"
-    },
-    "keywords": [
-        "karma-plugin",
-        "karma-preprocessor",
-        "angularjs",
-        "angular",
-        "json2js",
-        "require"
-    ],
-    "author": {
-        "name": "smaye81"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "grunt": "~0.4.1",
-        "grunt-simple-mocha": "~0.4",
-        "grunt-contrib-jshint": "~0.6",
-        "chai": "~1.4",
-        "mocha": "~1.8",
-        "grunt-npm": "~0.0.2",
-        "grunt-bump": "~0.0.7",
-        "grunt-auto-release": "~0.0.2"
-    },
-    "peerDependencies": {
-        "karma": ">=0.9"
-    },
-    "license": "MIT",
-    "contributors": [
-        {
-            "name": "Steve Ayers",
-            "email": "smaye81@gmail.com"
-        }
-    ],
-    "readmeFilename": "README.md",
-    "bugs": {
-        "url": "https://github.com/smaye81/karma-ng-json2js-preprocessor-requirejs/issues"
-    },
-    "homepage": "https://github.com/smaye81/karma-ng-json2js-preprocessor-requirejs",
-    "_id": "karma-ng-json2js-preprocessor-requirejs@0.1.0",
-    "_from": "karma-ng-json2js-preprocessor-requirejs@"
+  "name": "karma-ng-json2js-preprocessor-requirejs",
+  "version": "0.1.0",
+  "description": "A Karma plugin. Compile JSON files to Angular modules on the fly. Includes support for require.js.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/smaye81/karma-ng-json2js-preprocessor-requirejs.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-preprocessor",
+    "angularjs",
+    "angular",
+    "json2js",
+    "require"
+  ],
+  "author": {
+    "name": "smaye81"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "karma-jasmine": "^0.2.0",
+    "requirejs": "^2.1.11",
+    "karma-requirejs": "^0.2.1",
+    "karma-phantomjs-launcher": "^0.1.2",
+    "gulp": "^3.6.0",
+    "gulp-util": "^2.2.14",
+    "gulp-shell": "^0.2.4",
+    "angular": "^1.2.16"
+  },
+  "peerDependencies": {
+    "karma": ">=0.9"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Steve Ayers",
+      "email": "smaye81@gmail.com"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/smaye81/karma-ng-json2js-preprocessor-requirejs/issues"
+  },
+  "homepage": "https://github.com/smaye81/karma-ng-json2js-preprocessor-requirejs",
+  "_id": "karma-ng-json2js-preprocessor-requirejs@0.1.0",
+  "_from": "karma-ng-json2js-preprocessor-requirejs@"
 }

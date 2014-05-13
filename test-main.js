@@ -2,12 +2,10 @@ var allTestFiles = [];
 var TEST_REGEXP = /(spec|test)\.js$/i;
 
 var pathToModule = function (path) {
-    "use strict";
     return path.replace(/^\/base\//, '').replace(/\.js$/, '');
 };
 
 Object.keys(window.__karma__.files).forEach(function (file) {
-    "use strict";
     if (TEST_REGEXP.test(file)) {
         // Normalize paths to RequireJS module names.
         allTestFiles.push(pathToModule(file));
@@ -19,7 +17,8 @@ require.config({
     baseUrl: '/base',
 
     paths: {
-        "angular": "node_modules/angular/lib/angular.min"
+        "angular": "test/vendor/angular/angular",
+        "angular-mocks": "test/vendor/angular-mocks/angular-mocks"
     },
 
     shim: {

@@ -29,8 +29,7 @@
     "karma-phantomjs-launcher": "^0.1.2",
     "gulp": "^3.6.0",
     "gulp-util": "^2.2.14",
-    "gulp-shell": "^0.2.4",
-    "angular": "^1.2.16"
+    "gulp-shell": "^0.2.4"
   },
   "peerDependencies": {
     "karma": ">=0.9"

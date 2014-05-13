@@ -5,17 +5,36 @@ define(function (require) {
     describe('HeaderCtrl', function () {
         var angular = require('angular');
         var mocks = require('angular-mocks');
-        var sut;
 
-        beforeEach(mocks.module('navigation'));
+        var dataModule = require('test/stubs/data.json');
+        var emptyModule = require('test/stubs/empty.json');
 
-        beforeEach(mocks.inject(function ($controller) {
-            sut = $controller('HeaderCtrl');
-        }));
+        var data;
+        var empty;
+
+        beforeEach(mocks.module("test/stubs/data.json"));
+        beforeEach(mocks.module("test/stubs/empty.json"));
+
+        beforeEach(function () {
+            mocks.inject(function (_testStubsData_, _testStubsEmpty_) {
+                data = _testStubsData_;
+                empty = _testStubsEmpty_;
+            });
+        });
 
         it('should pass', function () {
 
-            return true;
-        })
+            expect(data).toEqual({
+                "data" : {
+                    "prop1" : "one",
+                    "prop2" : "two"
+                }
+            });
+        });
+
+        it('should pass again', function () {
+
+            expect(empty).toEqual({});
+        });
     });
 });

@@ -1,0 +1,22 @@
+{
+    "name": "karma-ng-json2js-preprocessor-requirejs",
+    "version": "1.0.0",
+    "authors": [
+        "Steve Ayers"
+    ],
+    "description": "Karma preprocessor for JSON files",
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "app/bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.2.15",
+        "angular-mocks": "~1.2.15"
+    }
+}

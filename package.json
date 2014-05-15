@@ -23,7 +23,7 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "karma-jasmine": "^0.2.0",
+        "karma-jasmine": "^0.2.2",
         "requirejs": "^2.1.11",
         "karma-requirejs": "^0.2.1",
         "karma-phantomjs-launcher": "^0.1.2"

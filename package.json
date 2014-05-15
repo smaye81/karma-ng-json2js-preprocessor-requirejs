@@ -1,6 +1,6 @@
 {
     "name": "karma-ng-json2js-preprocessor-requirejs",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A Karma plugin. Compile JSON files to Angular modules on the fly. Includes support for require.js.",
     "main": "lib/index.js",
     "scripts": {

@@ -113,7 +113,7 @@ For example, using the above configuration, this is what a sample test would loo
         var mocks = require('angular-mocks');
 
         // Require the module containing the service you're testing as well as the name of the file you need to inject
-        var widgetModule = require('modules/widgets);
+        var widgetModule = require('modules/widgets');
         var data = require('test/stubs/data.json');
 
         var sut;

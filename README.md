@@ -96,26 +96,57 @@ require(['angular'], function(angular) {
     })();
 });
 ```
-Inject json fixture into your test case:
-```js
-describe('me', function(){
-    beforeEach(module('served/data.json'));
+Setting the enableRequireJs property to false will result in the above wrapping require block to be removed.
 
-    it('should not fail', function() {
-        var testFixture;
-        inject(function (_servedData_) {
-            testFixture = _servedData_;
+## Usage
+
+Once configured, you then need to do 3 things to get the JSON values into your test:
+
+1.  Require the module file using the path of the JSON file you need to inject
+2.  Load the module using Angular mocks
+3.  Read the value from your module
+
+For example, using the above configuration, this is what a sample test would look like:
+
+    describe('Widget Service Test', function () {
+        var angular = require('angular');
+        var mocks = require('angular-mocks');
+
+        // Require the module containing the service you're testing as well as the name of the file you need to inject
+        var widgetModule = require('modules/widgets);
+        var data = require('test/stubs/data.json');
+
+        var sut;
+
+        var $httpBackend;
+        var $rootScope;
+        var mockData;
+
+        // Create the modules
+        beforeEach(mocks.module(widgetModule.name));
+        beforeEach(mocks.module('stubs'));
+
+        // The injected name of the value will be the full path of the file in camelCase (i.e. here its testStubsData)
+        beforeEach(mocks.inject(function (_$rootScope_, _$httpBackend_, _$q_, WidgetService, testStubsData) {
+            sut = WidgetService;
+            $httpBackend = _$httpBackend_;
+            $rootScope = _$rootScope_;
+            mockData = testStubsData;
+        }));
+
+
+        it('should set the widgets property', function () {
+
+            $httpBackend.when('GET', 'url/of/getWidgets/request').respond(JSON.stringify(mockData));
+
+            sut.getWidgets();
+
+            $httpBackend.flush();
+            expect(sut.widgets).toBe(mockData);
         });
 
-        expect(testFixture).toEqual({
-            prop: 'val'
-        });
     });
 
-});
-```
-
-----
 
 ## Contributing
 

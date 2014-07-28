@@ -2,7 +2,7 @@ define(function (require) {
 
     "use strict";
 
-    describe('HeaderCtrl', function () {
+    describe('Stub Injection Tests', function () {
         var angular = require('angular');
         var mocks = require('angular-mocks');
 
@@ -21,7 +21,7 @@ define(function (require) {
             });
         });
 
-        it('should pass', function () {
+        it('should inject the data value from data.json', function () {
 
             expect(data).toEqual({
                 "data" : {
@@ -31,7 +31,7 @@ define(function (require) {
             });
         });
 
-        it('should pass again', function () {
+        it('should inject an empty json file if specified', function () {
 
             expect(empty).toEqual({});
         });
